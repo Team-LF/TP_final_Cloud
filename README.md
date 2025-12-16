@@ -46,7 +46,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
 Dockerfile utilisé pour la containerisation :
 
-##4. Docker & Artifact Registry
+## 4. Docker & Artifact Registry
 Construction de l’image Docker :
 
 docker history tp-cloud-app
@@ -69,7 +69,7 @@ IMAGE          CREATED        CREATED BY                                      SI
 <missing>      8 days ago     # debian.sh --arch 'amd64' out/ 'trixie' '@1…   87.4MB    debuerreotype 0.16
 
 
-##5. Kubernetes (GKE)
+## 5. Kubernetes (GKE)
 Cluster créé via la console GCP ou Terraform
 
 Exemple de déploiement Kubernetes (deployment.yaml) :
@@ -112,7 +112,7 @@ spec:
     targetPort: 8080
 
 
-##6. IAM & sécurité
+## 6. IAM & sécurité
 Création d’un Service Account pour la CI/CD :
 
 gcloud iam service-accounts create cicd-sa
@@ -128,7 +128,7 @@ gcloud projects add-iam-policy-binding tp-cloud-gke-nolan \
 Principe : moindre privilège, le service account a uniquement les droits nécessaires.
 
 
-##7. Infrastructure as Code (Terraform)
+## 7. Infrastructure as Code (Terraform)
 Fichier main.tf utilisé :
 
 hcl
