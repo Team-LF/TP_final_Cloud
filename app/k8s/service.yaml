@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tp-cloud-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: tp-cloud
+  ports:
+  - port: 80
+    targetPort: 8080
